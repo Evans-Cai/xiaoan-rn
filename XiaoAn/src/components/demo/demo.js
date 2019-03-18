@@ -9,7 +9,6 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, ScrollView} from 'react-native';
 import {Header} from 'react-native-elements'
-import Main from './src/components/main/index'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -28,7 +27,11 @@ export default class App extends Component {
           centerComponent={{text: '信公小安', style: {color: '#fff'}}}
           // rightComponent={}
         />
-        <Main/>
+        <ScrollView style={{flex: 1, backgroundColor: 'skyblue'}}>
+          <View>
+
+          </View>
+        </ScrollView>
         <View style={{height: 50, backgroundColor: '#f0f1f5'}}/>
         <View style={{height: 34, backgroundColor: 'steelblue'}}/>
       </View>
