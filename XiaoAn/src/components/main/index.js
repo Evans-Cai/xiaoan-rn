@@ -20,7 +20,7 @@ export default class Main extends Component {
   render() {
     return (
       <ScrollView style={{flex: 1, backgroundColor: 'skyblue'}}>
-
+        <Text style={styles.welcome}>{instructions}</Text>
       </ScrollView>
     )
   }

@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, ScrollView} from 'react-native';
 import {Header} from 'react-native-elements'
 import Main from './src/components/main/index'
+import XaFooter from './src/components/footer/index'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -29,8 +30,10 @@ export default class App extends Component {
           // rightComponent={}
         />
         <Main/>
-        <View style={{height: 50, backgroundColor: '#f0f1f5'}}/>
-        <View style={{height: 34, backgroundColor: 'steelblue'}}/>
+        <View style={{height: 50, backgroundColor: '#f0f1f5'}}>
+          <XaFooter/>
+        </View>
+        <View style={{height: 34, backgroundColor: 'steelblue'}}></View>
       </View>
     );
   }
