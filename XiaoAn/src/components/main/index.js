@@ -8,6 +8,8 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, ScrollView} from 'react-native';
+import {WebView} from "react-native-webview";
+
 
 const instructions = Platform.select({
   ios: '\n\n\n\n\n牛逼啊谢家伟',
@@ -20,7 +22,11 @@ export default class Main extends Component {
   render() {
     return (
       <ScrollView style={{flex: 1, backgroundColor: 'skyblue'}}>
-        <Text style={styles.welcome}>{instructions}</Text>
+        <WebView
+          source={{uri: "https://wx.in-hope.cn"}}
+          style={{marginTop: 20, flex: 1}}
+          onLoadProgress={e => console.log(e.nativeEvent.progress)}
+        />
       </ScrollView>
     )
   }

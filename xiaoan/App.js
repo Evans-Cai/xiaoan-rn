@@ -30,10 +30,7 @@ export default class App extends Component {
           // rightComponent={}
         />
         <Main/>
-        <View style={{height: 50, backgroundColor: '#f0f1f5'}}>
-          <XaFooter/>
-        </View>
-        <View style={{height: 34, backgroundColor: 'steelblue'}}></View>
+        <XaFooter/>
       </View>
     );
   }

@@ -18,14 +18,19 @@ export default class XaFooter extends Component {
       {'name': '个人中心', 'index': '', 'type': ''}
     ]
     return (
-      <View style={styles.container}>
-        {data.map((item, index) => {
-          return (
-            <View key={index} style={styles.item}>
-              <Text>{item.name}</Text>
-            </View>
-          )
-        })}
+      <View style={{height: 84, backgroundColor: '#f0f1f5'}}>
+        <View style={styles.container}>
+          {data.map((item, index) => {
+            return (
+              <View key={index} style={styles.item}>
+                <Text>{item.name}</Text>
+              </View>
+            )
+          })}
+          <View style={{height: 34, backgroundColor: 'steelblue'}}>
+
+          </View>
+        </View>
       </View>
     );
   }
