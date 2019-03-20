@@ -18,23 +18,10 @@ export default class XaFooter extends Component {
       {'name': '个人中心', 'index': '', 'type': ''}
     ]
     return (
-      <View style={{
-        flex: 1,
-        flexDirection: 'row',
-        alignItems: 'stretch',
-        textAlign: 'center',
-        justifyContent: 'space-between'
-      }}>
+      <View style={styles.container}>
         {data.map((item, index) => {
           return (
-            <View key={index}
-                  style={{
-                    flex: 1,
-                    justifyContent: 'center',
-                    textAlign: 'center',
-                    height: 50,
-                    backgroundColor: '#f6f6f6'
-                  }}>
+            <View key={index} style={styles.item}>
               <Text>{item.name}</Text>
             </View>
           )
@@ -47,18 +34,16 @@ export default class XaFooter extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'row',
+    alignItems: 'stretch',
+    textAlign: 'center',
+    justifyContent: 'space-between'
+  },
+  item: {
+    flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
     textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    height: 50,
+    backgroundColor: '#f6f6f6'
+  }
 });
